@@ -1,0 +1,24 @@
+{
+    "kong_log" : {
+        "title" : "kong",
+        "description" : "Log format used in kong",
+        "url" : "http://konghq.com/",
+        "regex" : {
+            "basic" : {
+                "pattern" : "^(?<timestamp>\\d{4}/\\d{2}/\\d{2} \\d{2}:\\d{2}\\:\\d{2}) \\[(?<level>\\w+)\\] (?<pid>\\d+)#\\d(?<body>.*)$"
+            }
+        },
+        "timestamp-format": ["%Y/%m/%d %H:%M:%S"],
+        "level-field" : "level",
+        "level" : {
+            "error" : "error",
+            "warning" : "warning",
+            "info" : "notice"
+        },
+        "sample" : [
+            {
+                "line" : "2011/04/01 15:14:34 [ERROR] 123#0 foo"
+            }
+        ]
+    }
+}
